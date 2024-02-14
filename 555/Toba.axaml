@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="_555.Toba"
+        Title="Товары">
+    <Grid>
+        <DataGrid Name="ProductsGrid" x:CompileBindings="False" SelectionChanged="ProductsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=ProductID}" />
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Path=Name}" />
+                <DataGridTextColumn Header="Категория" Binding="{Binding Path=CategoryName}" />
+                
+                
+                
+                <DataGridTemplateColumn Header="Описание" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Description}" TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                
+                
+                
+                <DataGridTextColumn Header="Количество на складе" Binding="{Binding Path=QuantityAvailable}" />
+                <DataGridTextColumn Header="Цена (руб.)" Binding="{Binding Path=Price}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10">
+            <Button Content="Добавить данные" Click="OpenNextForm_Click"/>
+            <Button Content="Удалить" Click="DeleteProductsGrid_Click"/>
+            <Button Content="Редактировать" Click="EditProductsGrid_Click"/>
+    
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10">
+                <TextBox x:Name="SearchTextBox" Width="150" Margin="0,0,5,0"/>
+            
+            
+            
+                <ComboBox x:Name="CategoryComboBox" Width="150" Margin="0,0,5,0" SelectionChanged="CategoryComboBox_SelectionChanged"/>
+                <Button Content="Сбросить фильтр" Click="ResetFilterButton_Click"/>
+
+
+            </StackPanel>
+    
+        </StackPanel>
+    </Grid>
+</Window>

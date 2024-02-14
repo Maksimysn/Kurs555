@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width="600" Height="400"
+        x:Class="_555.Main"
+        Title="Основное окно">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="0,0,20,0">
+            <Button Content="Товар" Click="OpenTobaForm" Margin="0,0,0,20"/>
+            <Button Content="Клиенты" Click="OpenKlientForm" Margin="0,0,0,20"/>
+            <Button Content="Работники" Click="OpenRabForm" Margin="0,0,0,20"/>
+            <Button Content="Отчёт" Click="OpenRepForm" Margin="0,0,0,20"/>
+            <Button Content="Заказы" Click="OpenZakazForm" Margin="0,0,0,20"/>
+        </StackPanel>
+ 
+        <Image Grid.Column="1" Source="/Assets/Screenshot_1.png"
+               Width="400" Height="300"
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               Margin="0,0,20,0"/>
+    </Grid>
+</Window>

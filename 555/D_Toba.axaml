@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="_555.D_Toba"
+        Title="Добавление товара">
+
+
+    <DockPanel>
+        <StackPanel>
+            <TextBlock Text="Наименование:"/>
+            <TextBox Name="NameTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Категория:"/>
+            <ComboBox Name="CategoryComboBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Описание:"/>
+            <TextBox Name="DescriptionTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Количество на складе:"/>
+            <TextBox Name="QuantityAvailableTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Цена (руб.)"/>
+            <TextBox Name="PriceTextBox" Margin="0,0,0,10"/>
+            <Button Content="Добавить" Click="AddProducts_Click" DockPanel.Dock="Bottom" HorizontalAlignment="Center"/>
+        
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="555/App.axaml" value="555/555.csproj" />
+        <entry key="555/D_Toba.axaml" value="555/555.csproj" />
+        <entry key="555/E_Toba.axaml" value="555/555.csproj" />
+        <entry key="555/Main.axaml" value="555/555.csproj" />
+        <entry key="555/MainWindow.axaml" value="555/555.csproj" />
+        <entry key="555/Toba.axaml" value="555/555.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
